@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    background-color: transparent; 
+}
+
+.default-div {
+    margin-top: 32vh;
+    padding: 20px;
+    border-radius: 5px; 
+}

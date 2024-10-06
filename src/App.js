@@ -1,25 +1,50 @@
-import logo from './logo.svg';
+// src/App.js
+import React, { useState } from 'react';
+import Sidebar from './components/Sidebar';
+import Editor from './components/Editor';
+import Tabs from './components/Tabs';
+import Terminal from './components/Terminal';
 import './App.css';
 
-function App() {
+const App = () => {
+  // Array of open tabs
+  const [tabs, setTabs] = useState(["About.js"]); // Initially open one tab
+  const [activeTab, setActiveTab] = useState("About.js");
+  const [defaultPage, setDefaultPage] = useState(true);
+
+  // Open a new tab
+  const openTab = (tab) => {
+    if (!tabs.includes(tab)) {
+      setTabs([...tabs, tab]);
+    }
+    setActiveTab(tab);
+    setDefaultPage(false)
+  };
+
+  // Close an existing tab
+  const closeTab = (tab) => {
+    const newTabs = tabs.filter(t => t !== tab);
+    setTabs(newTabs);
+
+    if (newTabs.length === 0){
+      setActiveTab("");
+      setDefaultPage(true);
+    }
+    else if(activeTab === tab){
+      setActiveTab(newTabs[0]);
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="vscode-container">
+      <Sidebar openTab={openTab} /> {/* Pass the function to open tabs from Sidebar */}
+      <div className="main-content">
+        <Tabs tabs={tabs} activeTab={activeTab} setActiveTab={setActiveTab} closeTab={closeTab} />
+        <Editor activeTab={activeTab} />
+      </div>
+      <Terminal />
     </div>
   );
-}
+};
 
 export default App;
