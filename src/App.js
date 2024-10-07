@@ -7,7 +7,7 @@ import Terminal from './components/Terminal';
 import './App.css';
 
 const App = () => {
-  // Array of open tabs
+  //change to use proper filename
   const [tabs, setTabs] = useState(["About.js"]); // Initially open one tab
   const [activeTab, setActiveTab] = useState("About.js");
   const [activeFile, setActiveFile] = useState("About.js")

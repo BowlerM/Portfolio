@@ -1,0 +1,17 @@
+span.css-declaration-span{
+    color: #D7BA7D
+    /* color: #A6D727; */
+}
+
+p.css-line{
+    white-space: nowrap;
+}
+
+span.css-line-property{
+    color: #9CDCF0;
+    padding-left: 32px;
+}
+
+a.css-line-link{
+    color: #9CDCF0;
+}

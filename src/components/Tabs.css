@@ -2,7 +2,7 @@
     display: flex;
     background-color: #1e1e1e;
     border-bottom: 1px solid #333;
-    height: 40px;
+    min-height: 40px;
   }
   
   .tab {

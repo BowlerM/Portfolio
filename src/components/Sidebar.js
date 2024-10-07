@@ -1,15 +1,15 @@
-// src/components/Sidebar.js
-import React, { useState } from 'react';
 import { FaFolder, FaFileCode } from 'react-icons/fa';
 
 import "./Sidebar.css"
+import hashtag from "../assets/icons/hashtag.svg"
 
 const Sidebar = ({ openTab, activeFile, setActiveFile}) => {
+  const fileIconSize = 12
 
-    const handleTabOpen = (file) => {
-        setActiveFile(file);
-        openTab(file);
-    }
+  const handleTabOpen = (file) => {
+      setActiveFile(file);
+      openTab(file);
+  }
 
   return (
     <div className="sidebar">
@@ -32,7 +32,8 @@ const Sidebar = ({ openTab, activeFile, setActiveFile}) => {
           className={`file ${activeFile === 'Contact.js' ? 'active' : ''}`} 
           onClick={() => handleTabOpen('Contact.js')}
         >
-          <FaFileCode /> Contact.js
+          {/* TODO: Use font awesome */}
+          <img className="filetype" src={hashtag} width={fileIconSize} height={fileIconSize} alt=""></img> contact.css
         </div>
         <div 
           className={`file ${activeFile === 'Resume.js' ? 'active' : ''}`} 
