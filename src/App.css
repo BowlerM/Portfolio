@@ -43,9 +43,13 @@ html, body {
 }
 
 @media (max-width: 600px){
+  /* might be able to remove once handled fonts */
+  .terminal-input-container{
+    margin-bottom: 50px;
+  }
   .vscode-container{
     grid-template-columns: 125px 1fr;
-    grid-template-rows: 1fr 80px;
+    grid-template-rows: 1fr 135px;
   }
 
 }
