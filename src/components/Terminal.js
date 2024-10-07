@@ -4,11 +4,11 @@ import React, { useState, useEffect, useRef } from 'react';
 import "./Terminal.css"
 
 const Terminal = () => {
-    const [input, setInput] = useState(''); // Input state for the terminal
-    const [history, setHistory] = useState([]); // Store command history
-    const terminalRef = useRef(null); // Reference to the terminal to scroll to the bottom
-    const [showCursor, setShowCursor] = useState(true); // State to control cursor visibility
-    const inputRef = useRef(null); // Reference to the input element
+    const [input, setInput] = useState(''); 
+    const [history, setHistory] = useState([]); 
+    const terminalRef = useRef(null); 
+    const [showCursor, setShowCursor] = useState(true); 
+    const inputRef = useRef(null); 
 
 
     
@@ -48,7 +48,7 @@ const Terminal = () => {
             case "echo":
                 const content = command.split(" ").slice(1);
                 setHistory((prevHistory) => [...prevHistory, {"command": command, "usePrefix": true}]); 
-                setHistory((prevHistory) => [...prevHistory, {"command": `> ${content.join(" ")}`, "usePrefix": false}]);
+                setHistory((prevHistory) => [...prevHistory, {"command": `${content.join(" ")}`, "usePrefix": false}]);
                 break;
             default:
                 setHistory((prevHistory) => [...prevHistory, {"command": command, "usePrefix": true}]); 
@@ -76,7 +76,7 @@ const Terminal = () => {
                     <div key={index}>
                         {usePrefix ? (
                             <>
-                                <span className="terminal-user">marr@Ubuntu</span>:
+                                <span className="terminal-user">user@Ubuntu</span>:
                                 <span className="terminal-location">~/portfolio</span>
                                 <span style={{ marginRight: '4px', marginLeft: '0' }}>$</span>
                             </>
@@ -87,7 +87,7 @@ const Terminal = () => {
             </div>
             <div className="terminal-input-container">
             <span className="terminal-prompt"> 
-                <span className="terminal-user">marr@Ubuntu</span>:
+                <span className="terminal-user">user@Ubuntu</span>:
                 <span className="terminal-location">~/portfolio</span>$ 
             </span>
             <input

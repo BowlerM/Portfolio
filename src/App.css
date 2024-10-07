@@ -2,7 +2,6 @@
 html, body {
   margin: 0;
   font-family: 'Fira Code', monospace;
-  overflow-x: hidden;
 }
 
 .main-content {

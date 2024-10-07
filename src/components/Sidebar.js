@@ -4,8 +4,7 @@ import { FaFolder, FaFileCode } from 'react-icons/fa';
 
 import "./Sidebar.css"
 
-const Sidebar = ({ openTab }) => {
-    const [activeFile, setActiveFile] = useState();
+const Sidebar = ({ openTab, activeFile, setActiveFile}) => {
 
     const handleTabOpen = (file) => {
         setActiveFile(file);

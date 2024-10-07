@@ -10,6 +10,7 @@ const App = () => {
   // Array of open tabs
   const [tabs, setTabs] = useState(["About.js"]); // Initially open one tab
   const [activeTab, setActiveTab] = useState("About.js");
+  const [activeFile, setActiveFile] = useState("About.js")
   const [defaultPage, setDefaultPage] = useState(true);
 
   // Open a new tab
@@ -32,14 +33,15 @@ const App = () => {
     }
     else if(activeTab === tab){
       setActiveTab(newTabs[0]);
+      setActiveFile(newTabs[0]);
     }
   };
 
   return (
     <div className="vscode-container">
-      <Sidebar openTab={openTab} /> {/* Pass the function to open tabs from Sidebar */}
+      <Sidebar openTab={openTab} activeFile={activeFile} setActiveFile={setActiveFile} /> {/* Pass the function to open tabs from Sidebar */}
       <div className="main-content">
-        <Tabs tabs={tabs} activeTab={activeTab} setActiveTab={setActiveTab} closeTab={closeTab} />
+        <Tabs tabs={tabs} activeTab={activeTab} setActiveTab={setActiveTab} closeTab={closeTab} setActiveFile={setActiveFile} />
         <Editor activeTab={activeTab} />
       </div>
       <Terminal />
