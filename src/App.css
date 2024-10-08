@@ -44,6 +44,17 @@ html, body {
 
 @media (max-width: 600px){
   /* might be able to remove once handled fonts */
+  .file{
+    font-size: 12px;
+  }
+  .sidebar-icon{
+    font-size: 12px;
+  }
+
+  .dropdown-content{
+    padding-left: 10px;
+  }
+
   .terminal-input-container{
     margin-bottom: 50px;
   }

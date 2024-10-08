@@ -44,7 +44,7 @@ const App = () => {
         <Tabs tabs={tabs} activeTab={activeTab} setActiveTab={setActiveTab} closeTab={closeTab} setActiveFile={setActiveFile} />
         <Editor activeTab={activeTab} />
       </div>
-      <Terminal />
+      <Terminal setActiveFile={setActiveFile} openTab={openTab}/>
     </div>
   );
 };

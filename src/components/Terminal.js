@@ -1,15 +1,21 @@
 import React, { useState, useEffect, useRef } from 'react';
-
+import pages from "../pages/PageList"
 
 import "./Terminal.css"
 
-const Terminal = () => {
+
+const Terminal = ({setActiveFile, openTab}) => {
     const [input, setInput] = useState(''); 
     const [history, setHistory] = useState([]); 
     const terminalRef = useRef(null); 
     const [showCursor, setShowCursor] = useState(true); 
     const inputRef = useRef(null); 
 
+    const handleTabOpen = (file) => {
+        file = file.charAt(0).toUpperCase() + file.slice(1) + ".js"
+        setActiveFile(file);
+        openTab(file);
+    }
 
     
     const getCursorPosition = () => {
@@ -43,12 +49,21 @@ const Terminal = () => {
 
     const processCommand = (command) => {
         // Handle command logic
+        const exec = command.split(" ")[0];
+        let content = command.split(" ").slice(-1);
 
-        switch (command.split(" ")[0]) {
+        switch (exec) {
             case "echo":
-                const content = command.split(" ").slice(1);
                 setHistory((prevHistory) => [...prevHistory, {"command": command, "usePrefix": true}]); 
                 setHistory((prevHistory) => [...prevHistory, {"command": `${content.join(" ")}`, "usePrefix": false}]);
+                break;
+            case "open":
+                if(pages.indexOf(content.toString().toLowerCase()) === -1){
+                    setHistory((prevHistory) => [...prevHistory, {"command": command, "usePrefix": true}]); 
+                    setHistory((prevHistory) => [...prevHistory, {"command": "File doesn't exist!", "usePrefix": false}]);
+                    return;
+                }
+                handleTabOpen(content.toString().toLowerCase());
                 break;
             default:
                 setHistory((prevHistory) => [...prevHistory, {"command": command, "usePrefix": true}]); 
