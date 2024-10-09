@@ -3,7 +3,7 @@ import React from 'react';
 import About from '../pages/About';
 // import Projects from '../pages/Projects';
 import Contact from '../pages/Contact';
-// import Resume from '../pages/Resume';
+import CV from '../pages/CV';
 import Default from "../pages/Default"
 
 import "./Editor.css";
@@ -11,14 +11,14 @@ import "./Editor.css";
 const Editor = ({ activeTab }) => {
   const renderContent = () => {
     switch (activeTab) {
-      case "About.js":
+      case "ABOUT.md":
         return <About />;
     //   case "Projects.js":
     //     return <Projects />;
-      case "Contact.js":
+      case "contact.css":
         return <Contact />;
-    //   case "Resume.js":
-    //     return <Resume />;
+      case "CV.pdf":
+        return <CV />;
       default:
         return <Default />;
     }

@@ -8,9 +8,9 @@ import './App.css';
 
 const App = () => {
   //change to use proper filename
-  const [tabs, setTabs] = useState(["About.js"]); // Initially open one tab
-  const [activeTab, setActiveTab] = useState("About.js");
-  const [activeFile, setActiveFile] = useState("About.js")
+  const [tabs, setTabs] = useState(["ABOUT.md"]); // Initially open one tab
+  const [activeTab, setActiveTab] = useState("ABOUT.md");
+  const [activeFile, setActiveFile] = useState("ABOUT.md")
   const [defaultPage, setDefaultPage] = useState(true);
 
   // Open a new tab

@@ -5,8 +5,8 @@ import "./Contact.css"
 
 const Contact = () => {
     return (
-        <div>
-            <h1>Contacts</h1>
+        <div className="contact-content">
+            <h2>Contacts</h2>
             <div className="css-block">
                 <p className="css-declaration"><span className="css-declaration-span">.links</span> {"{"}</p>
                 <p className="css-line"><span className="css-line-property">github</span>: <a className="css-line-link" href="https://github.com/BowlerM">BowlerM</a>;</p>

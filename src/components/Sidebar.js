@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaFolder, FaFileCode, FaHashtag, FaJsSquare, FaAngleUp, FaAngleDown, FaTerminal, FaFolderOpen } from 'react-icons/fa';
+import { FaFolder, FaHashtag, FaJsSquare, FaAngleUp, FaAngleDown, FaTerminal, FaFolderOpen, FaInfoCircle, FaFilePdf } from 'react-icons/fa';
 
 import "./Sidebar.css"
 
@@ -26,24 +26,25 @@ const Sidebar = ({ openTab, activeFile, setActiveFile}) => {
       <hr></hr>
       <div className="files">
       <div 
-          className={`file ${activeFile === 'About.js' ? 'active' : ''}`} 
-          onClick={() => handleTabOpen('About.js')}
+          className={`file ${activeFile === 'ABOUT.md' ? 'active' : ''}`} 
+          onClick={() => handleTabOpen('ABOUT.md')}
         >
-          <FaFileCode /> About.js
+          <FaInfoCircle className="file-icon" style={{color: "#009ABB"}}/> 
+          <span>ABOUT.md</span>
         </div>
         <div 
-          className={`file ${activeFile === 'Contact.js' ? 'active' : ''}`} 
-          onClick={() => handleTabOpen('Contact.js')}
+          className={`file ${activeFile === 'CV.pdf' ? 'active' : ''}`} 
+          onClick={() => handleTabOpen('CV.pdf')}
+        >
+          <FaFilePdf className="file-icon" style={{color: "#C8333A"}} /> 
+          <span>CV.pdf</span>
+        </div>
+        <div 
+          className={`file ${activeFile === 'contact.css' ? 'active' : ''}`} 
+          onClick={() => handleTabOpen('contact.css')}
         >
           <FaHashtag className="file-icon" style={{color: "#519ABA"}} />
           <span>contact.css</span>
-        </div>
-        <div 
-          className={`file ${activeFile === 'Resume.js' ? 'active' : ''}`} 
-          onClick={() => handleTabOpen('Resume.js')}
-        >
-          <FaJsSquare className="file-icon" style={{color: "#FFD43B"}} /> 
-          <span>Resume.js</span>
         </div>
         <div 
           className={`file ${isProjectsOpen && activeFolder === "Projects" && !activeFile ? 'active' : ''}`}

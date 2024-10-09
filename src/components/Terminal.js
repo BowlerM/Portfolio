@@ -12,7 +12,7 @@ const Terminal = ({setActiveFile, openTab}) => {
     const inputRef = useRef(null); 
 
     const handleTabOpen = (file) => {
-        file = file.charAt(0).toUpperCase() + file.slice(1) + ".js"
+        file = file + pages[file]
         setActiveFile(file);
         openTab(file);
     }
@@ -58,12 +58,12 @@ const Terminal = ({setActiveFile, openTab}) => {
                 setHistory((prevHistory) => [...prevHistory, {"command": `${content.join(" ")}`, "usePrefix": false}]);
                 break;
             case "open":
-                if(pages.indexOf(content.toString().toLowerCase()) === -1){
+                if(!(content.toString() in pages)){
                     setHistory((prevHistory) => [...prevHistory, {"command": command, "usePrefix": true}]); 
                     setHistory((prevHistory) => [...prevHistory, {"command": "File doesn't exist!", "usePrefix": false}]);
                     return;
                 }
-                handleTabOpen(content.toString().toLowerCase());
+                handleTabOpen(content.toString());
                 break;
             default:
                 setHistory((prevHistory) => [...prevHistory, {"command": command, "usePrefix": true}]); 
