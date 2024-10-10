@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaFolder, FaHashtag, FaJsSquare, FaAngleUp, FaAngleDown, FaTerminal, FaFolderOpen, FaInfoCircle, FaFilePdf } from 'react-icons/fa';
+import { FaFolder, FaHashtag, FaJsSquare, FaAngleUp, FaAngleDown, FaTerminal, FaFolderOpen, FaInfoCircle, FaFilePdf, FaPython } from 'react-icons/fa';
 
 import "./Sidebar.css"
 
@@ -57,19 +57,33 @@ const Sidebar = ({ openTab, activeFile, setActiveFile}) => {
         {isProjectsOpen && (
           <div className={"dropdown-content"}>
           <div 
-              className={`file ${activeFile === 'StudyBot.js' ? 'active': ''}`}
-              onClick={() => handleTabOpen('StudyBot.js')}
+              className={`file ${activeFile === 'EduCord.js' ? 'active': ''}`}
+              onClick={() => handleTabOpen('EduCord.js')}
             >
               <FaJsSquare className="file-icon" style={{color: "#FFD43B"}} /> 
-              <span>StudyBot.js</span> 
+              <span>EduCord.js</span> 
+            </div>
+            <div 
+              className={`file ${activeFile === 'Marr.py' ? 'active': ''}`}
+              onClick={() => handleTabOpen('Marr.py')}
+            >
+              <FaPython className="file-icon" style={{color: "#519ABA"}} /> 
+              <span>Marr.py</span> 
+            </div>
+            <div 
+              className={`file ${activeFile === 'Webscrapi.py' ? 'active': ''}`}
+              onClick={() => handleTabOpen('Webscrapi.py')}
+            >
+              <FaPython className="file-icon" style={{color: "#519ABA"}} /> 
+              <span>Webscrapi.py</span> 
             </div>
           </div>
         )}
         <div 
-          className={`file ${activeFile === 'Commands.js' ? 'active' : ''}`} 
-          onClick={() => handleTabOpen('Commands.js')}
+          className={`file ${activeFile === 'commands.sh' ? 'active' : ''}`} 
+          onClick={() => handleTabOpen('commands.sh')}
         >
-          <FaTerminal className="file-icon" style={{color: "00ff1e"}} /> 
+          <FaTerminal className="file-icon" style={{color: "#00ff1e"}} /> 
           <span>commands.sh</span>
         </div>
       </div>

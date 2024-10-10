@@ -1,7 +1,8 @@
 const pages = {
     "ABOUT": ".md",
     "contact": ".css",
-    "CV": ".pdf"
+    "CV": ".pdf",
+    "EduCord": ".js"
 };
 
 export default pages

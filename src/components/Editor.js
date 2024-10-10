@@ -5,6 +5,8 @@ import StudyBot from '../pages/projects/StudyBot';
 import Contact from '../pages/Contact';
 import CV from '../pages/CV';
 import Default from "../pages/Default"
+import Marr from "../pages/projects/Marr"
+import Webscrapi from "../pages/projects/Webscrapi"
 
 import "./Editor.css";
 
@@ -13,8 +15,12 @@ const Editor = ({ activeTab }) => {
     switch (activeTab) {
       case "ABOUT.md":
         return <About />;
-      case "StudyBot.js":
+      case "EduCord.js":
         return <StudyBot />;
+      case "Marr.py":
+        return <Marr />;
+      case "Webscrapi.py":
+        return <Webscrapi />;
       case "contact.css":
         return <Contact />;
       case "CV.pdf":

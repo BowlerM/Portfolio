@@ -1,17 +1,5 @@
-.header-title {
-    display: inline-flex; 
-    align-items: center; 
+@media (max-width: 600px) {
+  div.study-bot-content video{
+      width: 350px
   }
-  
-  .header-link {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    margin-left: 10px;
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .header-link:hover{
-    color: rgba(255, 255, 255, 0.5)
-  }
+}
