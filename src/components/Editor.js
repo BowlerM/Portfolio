@@ -1,7 +1,7 @@
 // src/components/Editor.js
 import React from 'react';
 import About from '../pages/About';
-// import Projects from '../pages/Projects';
+import StudyBot from '../pages/projects/StudyBot';
 import Contact from '../pages/Contact';
 import CV from '../pages/CV';
 import Default from "../pages/Default"
@@ -13,8 +13,8 @@ const Editor = ({ activeTab }) => {
     switch (activeTab) {
       case "ABOUT.md":
         return <About />;
-    //   case "Projects.js":
-    //     return <Projects />;
+      case "StudyBot.js":
+        return <StudyBot />;
       case "contact.css":
         return <Contact />;
       case "CV.pdf":

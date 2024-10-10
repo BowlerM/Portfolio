@@ -11,7 +11,7 @@ const About = () => {
                 but always eager to expand my skills into other areas of software engineering.
             </p>
 
-            <p>I'm currently seeking a placement year for inbetween my 3rd and 4th year of university but also open
+            <p>I'm currently seeking a placement year for in between my 3rd and 4th year of university but also open
                 to a summer internship.
             </p>
             

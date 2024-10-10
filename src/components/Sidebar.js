@@ -29,7 +29,7 @@ const Sidebar = ({ openTab, activeFile, setActiveFile}) => {
           className={`file ${activeFile === 'ABOUT.md' ? 'active' : ''}`} 
           onClick={() => handleTabOpen('ABOUT.md')}
         >
-          <FaInfoCircle className="file-icon" style={{color: "#009ABB"}}/> 
+          <FaInfoCircle className="file-icon" style={{color: "#519ABA"}}/> 
           <span>ABOUT.md</span>
         </div>
         <div 
@@ -57,11 +57,11 @@ const Sidebar = ({ openTab, activeFile, setActiveFile}) => {
         {isProjectsOpen && (
           <div className={"dropdown-content"}>
           <div 
-              className={`file ${activeFile === 'Project1.js' ? 'active': ''}`}
-              onClick={() => handleTabOpen('Project1.js')}
+              className={`file ${activeFile === 'StudyBot.js' ? 'active': ''}`}
+              onClick={() => handleTabOpen('StudyBot.js')}
             >
               <FaJsSquare className="file-icon" style={{color: "#FFD43B"}} /> 
-              <span>project1.js</span> 
+              <span>StudyBot.js</span> 
             </div>
           </div>
         )}
