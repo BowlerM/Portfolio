@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaFolder, FaHashtag, FaJsSquare, FaAngleUp, FaAngleDown, FaTerminal, FaFolderOpen, FaInfoCircle, FaFilePdf, FaPython } from 'react-icons/fa';
+import { FaFolder, FaJsSquare, FaAngleUp, FaAngleDown, FaTerminal, FaFolderOpen, FaInfoCircle, FaFilePdf, FaPython, FaFileCode } from 'react-icons/fa';
 
 import "./Sidebar.css"
 
@@ -40,11 +40,11 @@ const Sidebar = ({ openTab, activeFile, setActiveFile}) => {
           <span>CV.pdf</span>
         </div>
         <div 
-          className={`file ${activeFile === 'contact.css' ? 'active' : ''}`} 
-          onClick={() => handleTabOpen('contact.css')}
+          className={`file ${activeFile === 'contact.json' ? 'active' : ''}`} 
+          onClick={() => handleTabOpen('contact.json')}
         >
-          <FaHashtag className="file-icon" style={{color: "#519ABA"}} />
-          <span>contact.css</span>
+          <FaFileCode className="file-icon" style={{color: "#FFD43B"}} />
+          <span>contact.json</span>
         </div>
         <div 
           className={`file ${isProjectsOpen && activeFolder === "Projects" && !activeFile ? 'active' : ''}`}

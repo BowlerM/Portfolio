@@ -1,0 +1,47 @@
+.command-name{
+    margin-bottom: 0;
+    font-size: 22px;
+}
+
+.command-description{
+    margin-top: 8px;
+    font-size: 14px;
+    margin-left: 20px;
+    margin-bottom: 35px;
+}
+
+.commands-content li{
+    margin-bottom: 0;
+    font-size: 14px;
+}
+.commands-content ul{
+    margin-top: 5px;
+    margin-left: 20px
+}
+
+
+@media (max-width: 600px){
+    .command-name{
+        margin-bottom: 0;
+        font-size: 14px;
+    }
+
+    .command-description{
+        margin-top: 8px;
+        font-size: 12px;
+        margin-left: 10px;
+        margin-bottom: 16px;
+    }
+    
+
+    .commands-content li{
+        margin-bottom: 0;
+        font-size: 12px;
+    }
+
+    .commands-content ul{
+        margin-top: 5px;
+        margin-left: 10px
+    }
+    
+}

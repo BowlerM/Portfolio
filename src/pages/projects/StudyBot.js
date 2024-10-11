@@ -22,11 +22,10 @@ const StudyBot = () => {
             </ul>
 
             <h3>Example</h3>
-            <video width="600" controls muted>
+            <video controls muted>
                 <source src={StudyBotExample} type="video/mp4"/>
                 Your browser does not support the video tag
             </video>
-
             <h3>Future additions</h3>
             <ul>
                 <li>Fully fledge out the flashcard system to allow quizzes and using OpenAI to summarise documents into flashcards.</li>

@@ -1,5 +1,6 @@
 import React from "react";
 import { FaLink } from "react-icons/fa";
+import MarrExample from "../../assets/videos/MarrExample.mp4"
 
 import "./Marr.css"
 
@@ -22,6 +23,13 @@ const Marr = () =>{
                 <li>Post creation, editing and deletion.</li>
                 <li>Ability to like other users posts which saves them for later viewing.</li>
             </ul>
+
+            <h3>Example</h3>
+            <video controls muted>
+                <source src={MarrExample} type="video/mp4"/>
+                Your browser does not support the video tag
+            </video>
+
 
         </div>
     );

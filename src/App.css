@@ -13,6 +13,7 @@ html, body {
   grid-column: 2 / span 1;
   grid-row: 1 / span 1;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .main-content::-webkit-scrollbar {
@@ -20,17 +21,17 @@ html, body {
 }
 
 .main-content::-webkit-scrollbar-track {
-  background: #2c2c2c; 
+  background: var(--scrollbar-track); 
   border-radius: 10px; 
 }
 
 .main-content::-webkit-scrollbar-thumb {
-  background: #444; 
+  background: var(--scrollbar-thumb); 
   border-radius: 10px; 
 }
 
 .main-content::-webkit-scrollbar-thumb:hover {
-  background: #888; 
+  background: var(--scrollbar-thumb-hover); 
 }
 
 .vscode-container {
@@ -39,28 +40,27 @@ html, body {
   grid-template-rows: 1fr 115px;
   height: 100vh;
   background-color: #1e1e1e;
-  color: #d4d4d4;
+  color: var(--text-color);
 }
 
 @media (max-width: 600px){
-  /* might be able to remove once handled fonts */
-  .file{
+  body{
     font-size: 12px;
   }
+
+  .file{
+    font-size: 10px;
+  }
   .sidebar-icon{
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .dropdown-content{
     padding-left: 10px;
   }
-
-  .terminal-input-container{
-    margin-bottom: 50px;
-  }
   .vscode-container{
     grid-template-columns: 125px 1fr;
-    grid-template-rows: 1fr 135px;
+    grid-template-rows: 1fr 100px;
   }
 
 }

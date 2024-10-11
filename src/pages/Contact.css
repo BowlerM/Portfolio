@@ -1,17 +1,27 @@
-span.css-declaration-span{
+span.json-declaration-span{
     color: #D7BA7D
-    /* color: #A6D727; */
 }
 
-p.css-line{
+p.json-line{
     white-space: nowrap;
 }
 
-span.css-line-property{
-    color: #9CDCF0;
+span.json-line-property{
+    color: var(--json-property);
     padding-left: 32px;
 }
 
-a.css-line-link{
-    color: #9CDCF0;
+a.json-line-link{
+    color: var(--json-link);
+}
+
+span.speech-mark{
+    color: var(--json-link);
+}
+
+@media (max-width: 600px){
+    span.json-line-property{
+        padding-left: 12px;
+    }
+
 }

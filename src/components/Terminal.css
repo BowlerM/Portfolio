@@ -1,14 +1,11 @@
 .terminal {
     grid-column: 1 / span 2; 
     grid-row: 2 / span 1; 
-    background-color: #1e1e1e; 
-    color: #d4d4d4; 
+    background-color: var(--background-color-primary); 
+    color: var(--text-color); 
     padding: 10px; 
-    font-family: 'Fira Code', monospace; 
-    /* display: flex; 
-    flex-direction: column;  */
     overflow-y: auto; 
-    border: 1px solid #333; 
+    border: 1px solid var(--border-color); 
     border-radius: 5px; 
     overflow-x: hidden; 
 }
@@ -17,7 +14,19 @@
     display: flex; 
     align-items: center; 
     position: relative;
+}
 
+
+.autocomplete-suggestion {
+    position: absolute;
+    top: 50%; 
+    color: grey; 
+    opacity: 0.7; 
+    pointer-events: none; 
+    white-space: nowrap; 
+    user-select: none; 
+    font-family: inherit;
+    transform: translateY(-50%);
 }
 
 .terminal-prompt{
@@ -39,7 +48,7 @@
 .terminal-input {
     caret-color: transparent;
     background-color: transparent; 
-    color: #d4d4d4; 
+    color: var(--text-color); 
     border: none; 
     outline: none; 
     width: 100%; 
@@ -51,7 +60,8 @@
 .block-caret {
     width: 8px; 
     height: 1.2em; 
-    background-color: #d4d4d4; 
+    background-color: var(--text-color); 
+    opacity: 0.8;
     position: absolute; 
     top: 50%; 
     transform: translateY(-50%);
@@ -64,15 +74,15 @@
 }
 
 .terminal::-webkit-scrollbar-track {
-    background: #2c2c2c; 
+    background: var(--scrollbar-track); 
     border-radius: 10px; 
 }
 
 .terminal::-webkit-scrollbar-thumb {
-    background: #444; 
+    background: var(--scrollbar-thumb); 
     border-radius: 10px; 
 }
 
 .terminal::-webkit-scrollbar-thumb:hover {
-    background: #888; 
+    background: var(--scrollbar-thumb-hover); 
 }

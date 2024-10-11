@@ -1,0 +1,119 @@
+:root {
+    --primary-color: #5c4354;
+    --background-color-primary: #1e1e1e;
+    --background-color-secondary: #252526;
+    --border-color: #333;
+    --text-color: #d4d4d4;
+    --scrollbar-track: #2c2c2c;
+    --scrollbar-thumb: #444;
+    --scrollbar-thumb-hover: #888;
+
+    --json-property: #9CDCF0;
+    --json-link: #CE9178;
+  }
+
+  [data-theme="light"] {
+    --primary-color: #e6ad68e3; 
+    --background-color-primary: #f9f9f9;
+    --background-color-secondary: #ffffff; 
+    --border-color: #e0e0e0; 
+    --text-color: #333333; 
+    --scrollbar-track: #f1f1f1; 
+    --scrollbar-thumb: #c2c2c2; 
+    --scrollbar-thumb-hover: #a1a1a1;
+
+    --json-property: #2a9d8f; 
+    --json-link: #e76f51; 
+  }
+
+  [data-theme="pastel"] { 
+    --primary-color: #d39fcf; 
+    --background-color-primary: #e3c6e2; 
+    --background-color-secondary: #f0e4f1;
+    --border-color: #e8c4d2; 
+    --text-color: #4b4b4b; 
+    --scrollbar-track: #f4e1f0; 
+    --scrollbar-thumb: #d0a1d5; 
+    --scrollbar-thumb-hover: #b581b5; 
+
+    --json-property: #e0979e; 
+    --json-link: #ff677d; 
+}
+
+[data-theme="monokai"] { 
+    --primary-color: #df6b4e ; 
+    --background-color-primary: #272822; 
+    --background-color-secondary: #383830; 
+    --border-color: #505044; 
+    --text-color: #f8f8f2; 
+    --scrollbar-track: #3c3c3c; 
+    --scrollbar-thumb: #5c5c5c; 
+    --scrollbar-thumb-hover: #888; 
+    --json-link: #a6e22e; 
+    --json-property: #f92672; 
+}
+
+[data-theme="starry"] {
+    --primary-color: #76294a; /* Cosmic slate */
+    --background-color-primary: #24253c; /* Deep night sky */
+    --background-color-secondary: #343557; /* Dark starlit grey */
+    --border-color: #383f57; /* Midnight blue border */
+    --text-color: #e0ddaf; /* Soft starshine */
+    --scrollbar-track: #1e1e25; /* Dim starlit shadow */
+    --scrollbar-thumb: #3b3d52; /* Cosmic cloud grey */
+    --scrollbar-thumb-hover: #6b6d8a; /* Nebula mist */
+    --json-link: #5bc0be; /* Comet teal */
+    --json-property: #f39c12; /* Solar flare amber */
+}
+
+
+
+.starry-background {
+    pointer-events: none;
+    position: fixed;
+    width: 100%;
+    height: 80%;
+    overflow: hidden; 
+    z-index: 0; 
+}
+
+.star{
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    z-index: -1;
+    animation: moveit;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+}
+
+.shooting-star {
+    position: absolute;
+    width: 2px;
+    height: 100px;
+    background: linear-gradient(white, rgba(255, 255, 255, 0));
+    animation: shoot 1s ease-out;
+
+  }
+  
+  @keyframes moveit{
+    0% {opacity: 0.2;}
+    50% {opacity: 0.6;}
+    100% {opacity: 0.2} 
+}
+
+@keyframes shoot {
+    0% {
+      transform: translate(0, 0) rotate(45deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(500px, -500px) rotate(45deg); 
+      opacity: 0;
+    }
+}
+
+@media (max-width: 600px){
+
+}
+

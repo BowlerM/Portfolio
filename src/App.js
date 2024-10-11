@@ -1,10 +1,11 @@
 // src/App.js
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 import Sidebar from './components/Sidebar';
 import Editor from './components/Editor';
 import Tabs from './components/Tabs';
 import Terminal from './components/Terminal';
 import './App.css';
+import "./themes.css"
 
 const App = () => {
   //change to use proper filename
@@ -12,6 +13,14 @@ const App = () => {
   const [activeTab, setActiveTab] = useState("ABOUT.md");
   const [activeFile, setActiveFile] = useState("ABOUT.md")
   const [defaultPage, setDefaultPage] = useState(true);
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem("theme") || "default";
+  });
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
   // Open a new tab
   const openTab = (tab) => {
@@ -42,9 +51,9 @@ const App = () => {
       <Sidebar openTab={openTab} activeFile={activeFile} setActiveFile={setActiveFile} /> {/* Pass the function to open tabs from Sidebar */}
       <div className="main-content">
         <Tabs tabs={tabs} activeTab={activeTab} setActiveTab={setActiveTab} closeTab={closeTab} setActiveFile={setActiveFile} />
-        <Editor activeTab={activeTab} />
+        <Editor activeTab={activeTab} theme={theme}/>
       </div>
-      <Terminal setActiveFile={setActiveFile} openTab={openTab}/>
+      <Terminal setActiveFile={setActiveFile} openTab={openTab} setTheme={setTheme}/>
     </div>
   );
 };
