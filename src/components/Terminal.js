@@ -46,8 +46,6 @@ const Terminal = ({setActiveFile, openTab, setTheme}) => {
 
     const updateSuggestions = (input) => {
         const wordCount = input.split(" ").length;
-        console.log("word count:", wordCount);
-        console.log("", suggestions.join(" "));
         if (input && wordCount === 1) {
             const filteredSuggestions = commandList.filter(command => command.startsWith(input));
             setSuggestions(filteredSuggestions);

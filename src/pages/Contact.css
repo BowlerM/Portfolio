@@ -21,7 +21,12 @@ span.speech-mark{
 
 @media (max-width: 600px){
     span.json-line-property{
-        padding-left: 12px;
+        padding-left: 10px;
+    }
+
+    p.json-line{
+        white-space: normal;
+        font-size: 12px;
     }
 
 }
