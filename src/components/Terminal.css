@@ -86,3 +86,9 @@
 .terminal::-webkit-scrollbar-thumb:hover {
     background: var(--scrollbar-thumb-hover); 
 }
+
+@media (max-width: 600px){
+    .terminal-input-container{
+        margin-bottom: 50px;
+      }
+}
