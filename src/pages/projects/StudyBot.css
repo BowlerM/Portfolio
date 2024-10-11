@@ -1,3 +1,9 @@
 .study-bot-content{
   width: 65%;
 }
+
+@media (max-width: 600px) {
+  .study-bot-content{
+      width: 90%
+  }
+}

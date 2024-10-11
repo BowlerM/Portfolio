@@ -5,3 +5,9 @@ div.about-content p{
 .about-content{
     width: 65%;
 }
+
+@media (max-width: 600px) {
+    .about-content{
+        width: 90%
+    }
+}

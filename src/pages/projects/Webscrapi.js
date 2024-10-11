@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./Webscrapi.css"
+
 const Websrapi = () => {
 
     return(

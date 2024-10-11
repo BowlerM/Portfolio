@@ -1,3 +1,9 @@
 .webscrapi-content{
     width: 65%;
 }
+
+@media (max-width: 600px) {
+    .webscrapi-content{
+        width: 90%
+    }
+}

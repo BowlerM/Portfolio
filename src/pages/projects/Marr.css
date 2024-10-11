@@ -1,3 +1,10 @@
 .marr-content{
     width: 65%;
 }
+
+@media (max-width: 600px) {
+    .marr-content{
+        width: 90%
+    }
+    
+}
