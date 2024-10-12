@@ -13,7 +13,7 @@ const Marr = () =>{
                 <FaLink />
                 </a>
             </h2>
-            <p>A basic text based social media site for my universities Web Applications module. Built using Flask 
+            <p>A basic text based social media site for my university's Web Applications module. Built using Flask 
                 with jinja templates along with a basic sqlite database for storage.
             </p>
             
