@@ -7,7 +7,7 @@ A portfolio site inspired by the text editor Visual Studio Code.
 ## Running Development Server
 
 ```bash
-npm run start
+npm start
 ```
 Go to [http://localhost:3000/Portfolio](http://localhost:3000/Portfolio) to see the result.
 
