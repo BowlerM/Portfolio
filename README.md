@@ -2,7 +2,7 @@
 
 A portfolio site inspired by the text editor Visual Studio Code.
 
-![screenshot](https://imgur.com/a/DKpzKkE)
+![screenshot](https://imgur.com/a/DKpzKkE.png)
 
 ## Running Development Server
 
