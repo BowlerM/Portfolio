@@ -21,7 +21,7 @@ const StudyBot = () => {
                     They can then get these cards by title or randomly through the bot along with other functions such as edit/delete</li>
             </ul>
 
-            <h3>Example</h3>
+            <h3>Demonstration</h3>
             <video controls muted>
                 <source src={StudyBotExample} type="video/mp4"/>
                 Your browser does not support the video tag

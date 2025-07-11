@@ -1,39 +1,24 @@
 import React, {useState, useEffect} from 'react';
-import About from '../pages/About';
-import StudyBot from '../pages/projects/StudyBot';
-import Contact from '../pages/Contact';
-import CV from '../pages/CV';
-import Default from "../pages/Default"
-import Marr from "../pages/projects/Marr"
-import Webscrapi from "../pages/projects/Webscrapi"
-import Commands from "../pages/Commands"
+import Default from "../pages/Default";
+import {files, projectFiles} from "./FileConfig.js"
 
 import "./Editor.css";
 
 const Editor = ({ activeTab, theme }) => {
-  const renderContent = () => {
-    switch (activeTab) {
-      case "ABOUT.md":
-        return <About />;
-      case "EduCord.js":
-        return <StudyBot />;
-      case "Marr.py":
-        return <Marr />;
-      case "Webscrapi.py":
-        return <Webscrapi />;
-      case "contact.json":
-        return <Contact />;
-      case "CV.pdf":
-        return <CV />;
-      case "commands.sh":
-        return <Commands />;
-      default:
-        return <Default />;
-    }
-  };
+  const allFiles = Array.isArray(files) ? files : [];
+  const allProjects = Array.isArray(projectFiles) ? projectFiles : [];
+  const allTabs = [...allFiles, ...allProjects];
   
-  const [stars, setStars] = useState([]);
+  const tabComponents = Object.fromEntries(
+    allTabs.map(file => [file.name, file.component])
+  );
 
+  const renderContent = () => {
+    const Component = tabComponents[activeTab] || Default;
+    return <Component/>
+  }
+
+  const [stars, setStars] = useState([]);
   useEffect(() => {
     // Generate stars only once when the component mounts
     const generatedStars = Array.from({ length: 400 }).map(() => {

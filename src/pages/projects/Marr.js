@@ -24,7 +24,7 @@ const Marr = () =>{
                 <li>Ability to like other users posts which saves them for later viewing.</li>
             </ul>
 
-            <h3>Example</h3>
+            <h3>Demonstration</h3>
             <video controls muted>
                 <source src={MarrExample} type="video/mp4"/>
                 Your browser does not support the video tag

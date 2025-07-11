@@ -6,15 +6,13 @@ const About = () => {
     return (
         <div className="about-content">
             <h2>About Me</h2>
-            <p>I'm a 3rd year Computer Science student studying for a BSc at The University of Leeds. I'm passionate
-                about software development with most experience in web development
-                but always eager to expand my skills into other areas of software engineering.
+            <p>I'm a recent Computer Science graduate from the University of Leeds with practical experience in various areas of software engineering, gained through academic projects and personal initiatives. 
+                I'm passionate about building reliable, user-focused software and continuously expanding my skill set.
             </p>
 
-            <p>I'm currently seeking a graduate position in the software industry.
-            </p>
+            <p>I'm actively seeking a graduate role in software engineering where I can contribute to impactful projects and grow as a developer.</p>
             
-            <p>Please use the sections on the sidebar to learn more about me and my work.</p>
+            <p>Feel free to explore the sections in the sidebar to learn more about my work and background.</p>
         </div>
     );
 };

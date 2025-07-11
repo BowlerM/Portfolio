@@ -1,10 +1,26 @@
 import React, { useState, useEffect, useRef } from 'react';
-import pages from "../pages/PageList"
-import themes from "../ThemeList"
 import commandList from "./CommandList"
 
 import "./Terminal.css"
 
+const themes = [
+    "default",
+    "light",
+    "pastel",
+    "monokai",
+    "starry"
+]
+
+const pageList = {
+    "ABOUT": ".md",
+    "contact": ".json",
+    "CV": ".pdf",
+    "EduCord": ".js",
+    "Marr": ".py",
+    "Webscrapi": ".py",
+    "commands": ".sh",
+    "Dissertation": ".py"
+};
 
 const Terminal = ({setActiveFile, openTab, setTheme}) => {
     const [input, setInput] = useState(''); 
@@ -17,7 +33,7 @@ const Terminal = ({setActiveFile, openTab, setTheme}) => {
 
 
     const handleTabOpen = (file) => {
-        file = file + pages[file]
+        file = file + pageList[file]
         setActiveFile(file);
         openTab(file);
     }
@@ -59,7 +75,7 @@ const Terminal = ({setActiveFile, openTab, setTheme}) => {
                 setSuggestions(filteredSuggestions);
             }
             else if (command === "open"){
-                const filteredSuggestions = Object.keys(pages).filter(page => page.startsWith(content));
+                const filteredSuggestions = Object.keys(pageList).filter(page => page.startsWith(content));
                 setSuggestions(filteredSuggestions);
             }
             else{
@@ -102,7 +118,7 @@ const Terminal = ({setActiveFile, openTab, setTheme}) => {
                 setHistory((prevHistory) => [...prevHistory, {"command": `${content.join(" ")}`, "usePrefix": false}]);
                 break;
             case "open":
-                if(!(content.toString() in pages)){
+                if(!(content.toString() in pageList)){
                     setHistory((prevHistory) => [...prevHistory, {"command": command, "usePrefix": true}]); 
                     setHistory((prevHistory) => [...prevHistory, {"command": "File doesn't exist!", "usePrefix": false}]);
                     return;
