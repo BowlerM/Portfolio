@@ -27,6 +27,10 @@ const Dissertation = () =>{
                 <source src={DissertationExample} type="video/mp4"/>
                 Your browser does not support the video tag
             </video>
+            <h3>Technical Report</h3>
+            <div classname="report-file">
+                <iframe src="/Portfolio/BOWLER24-FINAL.pdf" title="Technical Report"></iframe>
+            </div>
         </div>
     );
 }

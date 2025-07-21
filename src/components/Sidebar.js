@@ -27,7 +27,7 @@ const Sidebar = ({ openTab, activeFile, setActiveFile}) => {
       className={`file ${activeFile === file.name ? 'active' : ''}`}
       onClick={() => handleTabOpen(file.name)}
     >
-      <span className="file-icon">{file.icon} {file.name}</span>
+      {file.icon} <span>{file.name}</span>
     </div>
   );
 
