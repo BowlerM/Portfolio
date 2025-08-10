@@ -31,6 +31,7 @@
 
 .terminal-prompt{
     margin-right: 4px;
+    min-width: fit-content;
 }
 
 .terminal-user{
