@@ -12,22 +12,22 @@ import { FaInfoCircle, FaFilePdf, FaFileCode, FaJsSquare, FaPython, FaTerminal }
 export const files = [
   {
     name: "ABOUT.md",
-    icon: <FaInfoCircle style={{ color: "#519ABA" }} />,
+    icon: <FaInfoCircle className="file-icon" style={{ color: "#519ABA" }} />,
     component: About
   },
   {
     name: "CV.pdf",
-    icon: <FaFilePdf style={{ color: "#C8333A" }} />,
+    icon: <FaFilePdf className="file-icon" style={{ color: "#C8333A" }} />,
     component: CV
   },
   {
     name: "contact.json",
-    icon: <FaFileCode style={{ color: "#FFD43B" }} />,
+    icon: <FaFileCode className="file-icon" style={{ color: "#FFD43B" }} />,
     component: Contact
   },
   {
     name: "commands.sh",
-    icon: <FaTerminal style={{ color: "#00ff1e" }} />,
+    icon: <FaTerminal className="file-icon" style={{ color: "#00ff1e" }} />,
     component: Commands
   }
 ];
@@ -35,22 +35,22 @@ export const files = [
 export const projectFiles = [
   {
     name: "EduCord.js",
-    icon: <FaJsSquare style={{ color: "#FFD43B" }} />,
+    icon: <FaJsSquare className="file-icon" style={{ color: "#FFD43B" }} />,
     component: StudyBot
   },
   {
     name: "Marr.py",
-    icon: <FaPython style={{ color: "#519ABA" }} />,
+    icon: <FaPython className="file-icon" style={{ color: "#519ABA" }} />,
     component: Marr
   },
   {
     name: "Webscrapi.py",
-    icon: <FaPython style={{ color: "#519ABA" }} />,
+    icon: <FaPython className="file-icon" style={{ color: "#519ABA" }} />,
     component: Webscrapi
   },
   {
     name: "Dissertation.py",
-    icon: <FaPython style={{ color: "#519ABA" }} />,
+    icon: <FaPython className="file-icon" style={{ color: "#519ABA" }} />,
     component: Dissertation
   }
 ];

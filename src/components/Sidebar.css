@@ -2,6 +2,7 @@
     background-color: var(--background-color-primary);
     padding: 10px;
     border-right: 1px solid var(--border-color);
+    min-width: fit-content;
 }
 
 .file {
@@ -15,9 +16,9 @@
 }
 
 .file-icon {
-    margin-right: 3px;
-    flex-shrink: 0;
-    font-size: 14px;
+    min-height: fit-content; 
+    min-width: fit-content;
+    padding-right: 5px;
 }
 
 .file span {
